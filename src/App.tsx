@@ -17,7 +17,7 @@ export default function App(): JSX.Element {
 
       <PageLayout>
         <Section id="entering" className="flex flex-col items-center text-center">
-          <p className="font-hand text-xl text-dustyrose sm:text-2xl">welcome back to</p>
+          <p className="font-hand text-xl text-dustyrose sm:text-2xl">welcome to</p>
           <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">{introContent.names}</h1>
           <p className="mt-4 max-w-md font-serif text-lg text-ink/70 sm:text-xl">
             A small, unfinished archive of an ordinary, extraordinary love.

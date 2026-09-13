@@ -184,9 +184,9 @@ export const galleryPhotos: Photo[] = [
 ];
 
 export const song: SongContent = {
-  title: 'Kitchen Light',
-  artist: 'for A., recorded badly on a phone',
-  durationSeconds: 194,
+  title: 'Ordinary',
+  artist: 'Alex Warren',
+  durationSeconds: 186,
 };
 
 export const milestones: StoryMilestone[] = [

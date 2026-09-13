@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Music2, Pause, Play } from 'lucide-react';
+import { Music2 } from 'lucide-react';
 import { Section } from './PageLayout';
 import {
   leftNote,
@@ -78,78 +77,106 @@ function HandwrittenNote({ note }: { note: NoteContent }): JSX.Element {
  * locally (no real audio asset is assumed) so the interaction and visual
  * language can be dropped onto a real track later.
  * ---------------------------------------------------------------------- */
-function formatTime(fraction: number, durationSeconds: number): string {
-  const totalSeconds = Math.round(fraction * durationSeconds);
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-}
+// function MusicPlayer({ song: track }: { song: SongContent }): JSX.Element {
+//   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+//   const [progress, setProgress] = useState<number>(0);
+
+//   useEffect(() => {
+//     if (!isPlaying) {
+//       return;
+//     }
+
+//     const intervalId = window.setInterval(() => {
+//       setProgress((previous) => {
+//         const next = previous + 1 / track.durationSeconds;
+//         return next >= 1 ? 0 : next;
+//       });
+//     }, 1000);
+
+//     return () => window.clearInterval(intervalId);
+//   }, [isPlaying, track.durationSeconds]);
+
+//   const handleToggle = (): void => setIsPlaying((previous) => !previous);
+
+//   return (
+//     <div className="w-full max-w-[260px] rounded-md bg-cream/90 p-5 shadow-paper">
+//       <div className="flex items-center gap-4">
+//         <motion.div
+//           animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
+//           transition={
+//             isPlaying ? { duration: 6, repeat: Infinity, ease: 'linear' } : { duration: 0.3 }
+//           }
+//           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy text-cream shadow-md"
+//         >
+//           <Music2 className="h-5 w-5" aria-hidden="true" />
+//         </motion.div>
+//         <div className="min-w-0">
+//           <p className="truncate font-serif text-base font-medium text-ink">{track.title}</p>
+//           <p className="truncate font-hand text-sm text-ink/60">{track.artist}</p>
+//         </div>
+//       </div>
+
+//       <div className="mt-4 flex items-center gap-3">
+//         <button
+//           type="button"
+//           onClick={handleToggle}
+//           aria-label={isPlaying ? 'Pause the song' : 'Play the song'}
+//           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-burgundy text-cream transition-transform hover:scale-105"
+//         >
+//           {isPlaying ? (
+//             <Pause className="h-4 w-4" aria-hidden="true" />
+//           ) : (
+//             <Play className="ml-0.5 h-4 w-4" aria-hidden="true" />
+//           )}
+//         </button>
+//         <div className="flex-1">
+//           <div className="h-1 w-full overflow-hidden rounded-full bg-ink/10">
+//             <div
+//               className="h-full rounded-full bg-dustyrose transition-[width] duration-500"
+//               style={{ width: `${progress * 100}%` }}
+//             />
+//           </div>
+//           <div className="mt-1 flex justify-between font-serif text-[11px] text-ink/50">
+//             <span>{formatTime(progress, track.durationSeconds)}</span>
+//             <span>{formatTime(1, track.durationSeconds)}</span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 function MusicPlayer({ song: track }: { song: SongContent }): JSX.Element {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [progress, setProgress] = useState<number>(0);
-
-  useEffect(() => {
-    if (!isPlaying) {
-      return;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setProgress((previous) => {
-        const next = previous + 1 / track.durationSeconds;
-        return next >= 1 ? 0 : next;
-      });
-    }, 1000);
-
-    return () => window.clearInterval(intervalId);
-  }, [isPlaying, track.durationSeconds]);
-
-  const handleToggle = (): void => setIsPlaying((previous) => !previous);
-
   return (
-    <div className="w-full max-w-[260px] rounded-md bg-cream/90 p-5 shadow-paper">
-      <div className="flex items-center gap-4">
-        <motion.div
-          animate={isPlaying ? { rotate: 360 } : { rotate: 0 }}
-          transition={
-            isPlaying ? { duration: 6, repeat: Infinity, ease: 'linear' } : { duration: 0.3 }
-          }
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy text-cream shadow-md"
-        >
+    <div className="w-full max-w-[320px] rounded-md bg-cream/90 p-3 shadow-paper">
+      <div className="mb-3 flex items-center gap-3 px-2 pt-2">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-burgundy text-cream shadow-md">
           <Music2 className="h-5 w-5" aria-hidden="true" />
-        </motion.div>
+        </div>
+
         <div className="min-w-0">
-          <p className="truncate font-serif text-base font-medium text-ink">{track.title}</p>
-          <p className="truncate font-hand text-sm text-ink/60">{track.artist}</p>
+          <p className="truncate font-serif text-base font-medium text-ink">
+            {track.title}
+          </p>
+
+          <p className="truncate font-hand text-sm text-ink/60">
+            {track.artist}
+          </p>
         </div>
       </div>
 
-      <div className="mt-4 flex items-center gap-3">
-        <button
-          type="button"
-          onClick={handleToggle}
-          aria-label={isPlaying ? 'Pause the song' : 'Play the song'}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-burgundy text-cream transition-transform hover:scale-105"
-        >
-          {isPlaying ? (
-            <Pause className="h-4 w-4" aria-hidden="true" />
-          ) : (
-            <Play className="ml-0.5 h-4 w-4" aria-hidden="true" />
-          )}
-        </button>
-        <div className="flex-1">
-          <div className="h-1 w-full overflow-hidden rounded-full bg-ink/10">
-            <div
-              className="h-full rounded-full bg-dustyrose transition-[width] duration-500"
-              style={{ width: `${progress * 100}%` }}
-            />
-          </div>
-          <div className="mt-1 flex justify-between font-serif text-[11px] text-ink/50">
-            <span>{formatTime(progress, track.durationSeconds)}</span>
-            <span>{formatTime(1, track.durationSeconds)}</span>
-          </div>
-        </div>
-      </div>
+      <iframe
+        data-testid="embed-iframe"
+        src="https://open.spotify.com/embed/track/6qqrTXSdwiJaq8SO0X2lSe?utm_source=generator&si=283025179be94c03"
+        width="100%"
+        height="112"
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        className="rounded-xl"
+        title={`${track.title} by ${track.artist}`}
+      />
     </div>
   );
 }
