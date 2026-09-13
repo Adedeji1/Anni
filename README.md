@@ -1,4 +1,4 @@
-# Amara & Chidi — A Memory Kept
+# Odunayo & Adedeji — A Memory Kept
 
 A romantic, cinematic scrapbook site built with React, TypeScript, Tailwind CSS and Framer Motion.
 
