@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Music2, Pause, Play } from 'lucide-react';
+import { Music2 } from 'lucide-react';
 import { Section } from './PageLayout';
 import {
   leftNote,
@@ -78,13 +77,6 @@ function HandwrittenNote({ note }: { note: NoteContent }): JSX.Element {
  * locally (no real audio asset is assumed) so the interaction and visual
  * language can be dropped onto a real track later.
  * ---------------------------------------------------------------------- */
-function formatTime(fraction: number, durationSeconds: number): string {
-  const totalSeconds = Math.round(fraction * durationSeconds);
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-}
-
 // function MusicPlayer({ song: track }: { song: SongContent }): JSX.Element {
 //   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 //   const [progress, setProgress] = useState<number>(0);
