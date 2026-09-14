@@ -20,7 +20,7 @@ export default function App(): JSX.Element {
           <p className="font-hand text-xl text-dustyrose sm:text-2xl">welcome to</p>
           <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">{introContent.names}</h1>
           <p className="mt-4 max-w-md font-serif text-lg text-ink/70 sm:text-xl">
-            A small, unfinished archive of an ordinary, extraordinary love.
+            NYSC gave us CDS and awkward small talk. Somehow, a year later, it gave us this.
           </p>
         </Section>
 
