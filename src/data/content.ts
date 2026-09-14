@@ -66,7 +66,7 @@ export const introContent: IntroContent = {
 export const loveLetter: LoveLetterContent = {
   salutation: 'My Aadumaadan,',
   paragraphs: [
-    "One year ago I was just a corper trying to survive NYSC in Ibadan, and you were the girl from CDS who somehow ended up walking the same road home as me. I didn't plan for any of this. I don't think you did either.",
+    "One year ago we was just corper trying to survive NYSC in Ibadan, and you were the girl from CDS who somehow ended up walking the same road home as me. I didn't plan for any of this. I don't think you did either.",
     "Most of what I remember isn't dramatic. It's going to work, sitting through CDS, walking you home, talking about nothing until nothing became something. Ordinary days I only recognised as memories after they were already memories.",
     'Sundays were their own thing. Church would end and somehow the rest of the day just became ours — no plan, no agenda, just you, me, and whatever nonsense we found to laugh about.',
     "You're stubborn, you no dey hear word most times, and you can disturb my peace like it's your full-time job. You're also still the one person whose matter I don't joke with. Both things are true.",
