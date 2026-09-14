@@ -105,7 +105,7 @@ export default function IntroExperience({ onEnter }: IntroExperienceProps): JSX.
                 animate={stage !== 'closed' ? 'visible' : 'hidden'}
                 className="absolute left-1/2 top-2 h-32 w-44 -translate-x-1/2 rounded-sm bg-ivory shadow-paper sm:w-52"
               >
-                <p className="px-4 pt-6 font-hand text-lg text-ink/70 sm:text-xl">come in, love.</p>
+               <p className="px-4 pt-6 font-hand text-lg text-ink/70 sm:text-xl">come in, Aadumaadan.</p>
               </motion.div>
 
               {/* Envelope body */}
