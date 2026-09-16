@@ -93,7 +93,7 @@ export const rightNote: NoteContent = {
 export const leftPhotos: Photo[] = [
   {
     id: 'left-1',
-    src: 'PHOTO_PLACEHOLDER_01',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601070/first_pic_e5y9pm.jpg',
     alt: 'Odunayo and Adedeji during NYSC in Ibadan',
     caption: 'Ibadan, before we knew where this was going',
     rotation: -4,
