@@ -14,9 +14,12 @@ export interface IntroContent {
 
 export type PhotoSize = 'sm' | 'md' | 'lg';
 
+export type PhotoType = 'image' | 'video';
+
 export interface Photo {
   id: string;
   src: string;
+  type: PhotoType;
   alt: string;
   caption: string;
   /** Small deliberate tilt, in degrees. Kept subtle: -6 to 6. */
@@ -59,41 +62,45 @@ export interface StoryMilestone {
 export const introContent: IntroContent = {
   names: 'Odunayo & Adedeji',
   date: '18 . 09 . 2025',
-  taglineLines: ['one year.', 'somehow NYSC turned into this.', "and I'm not complaining."],
+  taglineLines: [
+  'one year.',
+  'one unexpected beginning.',
+  'one woman I still choose.'
+],
   cta: 'Open',
 };
 
 export const loveLetter: LoveLetterContent = {
   salutation: 'My Aadumaadan,',
   paragraphs: [
-    "One year ago I was just a corper trying to survive NYSC in Ibadan, and you were the girl from CDS who somehow ended up walking the same road home as me. I didn't plan for any of this. I don't think you did either.",
-    "Most of what I remember isn't dramatic. It's going to work, sitting through CDS, walking you home, talking about nothing until nothing became something. Ordinary days I only recognised as memories after they were already memories.",
-    'Sundays were their own thing. Church would end and somehow the rest of the day just became ours — no plan, no agenda, just you, me, and whatever nonsense we found to laugh about.',
-    "You're stubborn, you no dey hear word most times, and you can disturb my peace like it's your full-time job. You're also still the one person whose matter I don't joke with. Both things are true.",
-    'Then NYSC ended, we picked different schools for our Masters, and suddenly "let me just walk down to see you" became a whole logistics conversation. LDR is wickedness, honestly. But it hasn\'t changed how much I want to see you — just how hard I have to work at it now.',
-    "It hasn't all been smooth. We've misunderstood each other, said things we had to walk back, gone quiet when we should have talked. But we kept choosing to sort it out instead of walking away, and that matters more to me than pretending we never fought.",
-    "I don't just love the version of us with the big moments. I love the boring Tuesdays, the church Sundays, the arguments we survived — all of it. One year down. Still choosing you, even from this distance.",
+    "Sometimes I actually stop and think about how strange this whole thing is. One random yes, one year, and somehow you became such a big part of my life that I can’t really remember what it felt like before you were in it.",
+    "And the funny thing is, I don't think I have ever looked at you and thought, 'This is enough'. Somehow, every time I think I have fully understood how much I love you, you give me another reason to realise I was still underestimating it.",
+    "You have been the woman of my dreams from day one and one year later, you're still that woman. Still beautiful, still annoying, still stubborn, still capable of disturbing my peace with absolutely no remorse 😂. Somehow, I am Loving it.",
+    "There is genuinely nothing I want in a woman that you don't have, and the annoying part is that you have some of them in excess. Beauty choke. Imagine money con join this compliment? Soon baby 😂. At this point, I'm just wondering what God was trying to prove to me.",
+    "But beyond all the things I can list, it's you that I love. Your presence. Your way of making ordinary things feel like something. The conversations, the laughter, the little frustrations, the moments where we're both being unreasonable, and even the times we've had to find our way back to each other. I've come to realise that loving you isn't just about the big moments. It's all these little pieces of us that somehow became home.",
+    "So one year later, I don't just look at you and see my girlfriend. I look at you and see the woman I fell for, the woman I have grown with, the woman who has made her way into so many parts of my life, and the woman I still look at and think, 'Yeah… I really, really Love this girl.' 😂❤️ And if this is only year one, I'm genuinely excited to see everything else we become.",
   ],
-  signOff: 'Still stuck with me,',
+  signOff: 'Still here, Still yours😍❤️',
   signature: 'A.',
 };
 
 export const leftNote: NoteContent = {
   id: 'note-left',
-  text: "You no dey hear word 😂 but I still wouldn't trade you for anyone who does.",
+  text: "Woman of My Dreams Today, Tomorrow and Forever😍😍❤️.",
   rotation: -3,
 };
 
 export const rightNote: NoteContent = {
   id: 'note-right',
-  text: 'It is well — our official answer to literally everything.',
+  text: 'One of the random Moment, Now Golden.',
   rotation: 2,
 };
 
 export const leftPhotos: Photo[] = [
   {
     id: 'left-1',
-    src: 'PHOTO_PLACEHOLDER_01',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601070/first_pic_e5y9pm.jpg',
     alt: 'Odunayo and Adedeji during NYSC in Ibadan',
     caption: 'Ibadan, before we knew where this was going',
     rotation: -4,
@@ -101,9 +108,10 @@ export const leftPhotos: Photo[] = [
   },
   {
     id: 'left-2',
-    src: 'PHOTO_PLACEHOLDER_02',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601064/first_date_qnsi4n.jpg',
     alt: 'Odunayo and Adedeji after a CDS day',
-    caption: 'straight from CDS, still in uniform',
+    caption: 'First Official Date, La Baby, La Cramps 😂😂😭😭',
     rotation: 3,
     size: 'sm',
   },
@@ -112,17 +120,19 @@ export const leftPhotos: Photo[] = [
 export const rightPhotos: Photo[] = [
   {
     id: 'right-1',
-    src: 'PHOTO_PLACEHOLDER_03',
-    alt: 'Odunayo and Adedeji walking home from work during NYSC',
-    caption: 'the walk back, one of many',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601086/random_keke_moment_g0sm7c.mp4',
+    alt: 'Odunayo and Adedeji going to work during NYSC',
+    caption: 'Random Moments, one of many',
     rotation: 4,
     size: 'md',
   },
   {
     id: 'right-2',
-    src: 'PHOTO_PLACEHOLDER_04',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601082/Pop_day_yr2ulw.mp4',
     alt: 'Odunayo and Adedeji on a Sunday after church',
-    caption: 'Sunday, after church, before nothing in particular',
+    caption: 'And just like that, NYSC was over, but we were just getting started 😍❤️',
     rotation: -3,
     size: 'sm',
   },
@@ -131,57 +141,64 @@ export const rightPhotos: Photo[] = [
 export const galleryPhotos: Photo[] = [
   {
     id: 'gallery-1',
-    src: 'PHOTO_PLACEHOLDER_05',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/image/upload/f_auto,q_auto/v1789601080/random_Cds_Day_p9px3g',
     alt: 'Odunayo and Adedeji laughing about nothing in particular',
-    caption: "laughing at something neither of us can explain now",
+    caption: "She was busy shining teeth, I was busy falling in love. 😂",
     rotation: -3,
     size: 'lg',
   },
   {
     id: 'gallery-2',
-    src: 'PHOTO_PLACEHOLDER_06',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601071/IMG_5463_wxcsut.mov',
     alt: 'A favourite candid photo of Odunayo',
-    caption: "this one's just my favourite, no explanation needed",
+    caption: "this one's just my favourite, my answered prayers",
     rotation: 4,
     size: 'sm',
   },
   {
     id: 'gallery-3',
-    src: 'PHOTO_PLACEHOLDER_07',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601094/WVJM9954_jjgzjz.mp4',
     alt: "Odunayo and Adedeji before starting their Master's programmes apart",
-    caption: 'right before LDR came to disgrace us',
+    caption: 'Birthday girl decided I was part of the celebration too. 😂',
     rotation: 2,
     size: 'md',
   },
   {
     id: 'gallery-4',
-    src: 'PHOTO_PLACEHOLDER_08',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601093/XNQO3285_poqmb6.mp4',
     alt: 'A recent photo of Odunayo and Adedeji despite the distance',
-    caption: 'proof we still find our way back to each other',
+    caption: '1 attempted bite, 1 attempted Jump, 2 murder attempt',
     rotation: -5,
     size: 'sm',
   },
   {
     id: 'gallery-5',
-    src: 'PHOTO_PLACEHOLDER_09',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/image/upload/v1789601077/IMG_7433_dlqicp.jpg',
     alt: 'An ordinary everyday photo of Odunayo and Adedeji',
-    caption: 'just an ordinary day, kept anyway',
+    caption: 'This little thing means more than it looks❤️',
     rotation: 3,
     size: 'lg',
   },
   {
     id: 'gallery-6',
-    src: 'PHOTO_PLACEHOLDER_10',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/image/upload/v1789601071/IMG_5916_aoqpnw.jpg',
     alt: 'Odunayo and Adedeji on a quiet Sunday morning',
-    caption: 'Sunday mornings, mostly quiet, mostly us',
+    caption: 'A perfectly normal picture of my perfectly unserious woman. 😂',
     rotation: -2,
     size: 'sm',
   },
   {
     id: 'gallery-7',
-    src: 'PHOTO_PLACEHOLDER_11',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/image/upload/v1789601079/One_weird_one_for_her_v5xc4e.jpg',
     alt: 'Odunayo and Adedeji celebrating one year together',
-    caption: "one year down, and you're still stuck with me",
+    caption: "No context. Just vibes and nostrils. 😂",
     rotation: 4,
     size: 'md',
   },
@@ -198,24 +215,24 @@ export const milestones: StoryMilestone[] = [
     id: 'milestone-1',
     date: 'NYSC, 2025',
     title: 'How it started',
-    description: 'Ibadan, work, CDS, and a walk home that somehow became a habit.',
+    description: 'Ibadan, CDS, work, and one girl I somehow started seeing everywhere.',
   },
   {
     id: 'milestone-2',
     date: 'After NYSC',
     title: 'The distance',
-    description: '"Let me come see you" turned into an actual plan. LDR is wickedness.',
+    description: '"Are you home?" suddenly needed transport, planning, and suffering. LDR is wickedness.',
   },
   {
     id: 'milestone-3',
     date: 'One year later',
     title: 'Still here',
-    description: 'Same two stubborn people, still choosing each other — misunderstandings and all.',
+    description: 'Still two stubborn people, still choosing each other, still disturbing each other’s peace.',
   },
 ];
 
 export const closing: ClosingContent = {
   eyebrow: 'One year down',
-  lines: ['one year down.', 'still choosing the ordinary days,', 'still choosing you,', '(you\'re still stuck with me 😂)'],
+  lines: ['one year down.', 'still choosing the ordinary days,', 'still choosing you,', '(one year later, and I still Love you like day 1.❤️😂)'],
   signature: '— O. & A.',
 };
