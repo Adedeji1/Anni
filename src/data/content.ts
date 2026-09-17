@@ -14,9 +14,12 @@ export interface IntroContent {
 
 export type PhotoSize = 'sm' | 'md' | 'lg';
 
+export type PhotoType = 'image' | 'video';
+
 export interface Photo {
   id: string;
   src: string;
+  type: PhotoType;
   alt: string;
   caption: string;
   /** Small deliberate tilt, in degrees. Kept subtle: -6 to 6. */
@@ -80,19 +83,20 @@ export const loveLetter: LoveLetterContent = {
 
 export const leftNote: NoteContent = {
   id: 'note-left',
-  text: "You no dey hear word 😂 but I still wouldn't trade you for anyone who does.",
+  text: "Woman of My Dreams Today, Tomorrow and Forever😍😍❤️.",
   rotation: -3,
 };
 
 export const rightNote: NoteContent = {
   id: 'note-right',
-  text: 'It is well — our official answer to literally everything.',
+  text: 'One of the random Moment, Now Golden.',
   rotation: 2,
 };
 
 export const leftPhotos: Photo[] = [
   {
     id: 'left-1',
+    type: 'image',
     src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601070/first_pic_e5y9pm.jpg',
     alt: 'Odunayo and Adedeji during NYSC in Ibadan',
     caption: 'Ibadan, before we knew where this was going',
@@ -101,7 +105,8 @@ export const leftPhotos: Photo[] = [
   },
   {
     id: 'left-2',
-    src: 'PHOTO_PLACEHOLDER_02',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601086/random_keke_moment_g0sm7c.mp4',
     alt: 'Odunayo and Adedeji after a CDS day',
     caption: 'straight from CDS, still in uniform',
     rotation: 3,
@@ -112,8 +117,9 @@ export const leftPhotos: Photo[] = [
 export const rightPhotos: Photo[] = [
   {
     id: 'right-1',
-    src: 'PHOTO_PLACEHOLDER_03',
-    alt: 'Odunayo and Adedeji walking home from work during NYSC',
+    type: 'video',
+    src: 'https://res.cloudinary.com/dzq0ikg4b/video/upload/v1789601086/random_keke_moment_g0sm7c.mp4',
+    alt: 'Odunayo and Adedeji going to work during NYSC',
     caption: 'the walk back, one of many',
     rotation: 4,
     size: 'md',

@@ -40,19 +40,32 @@ export function Polaroid({ photo, className = '' }: PolaroidProps): JSX.Element 
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className={`${POLAROID_WIDTH[photo.size]} shrink-0 select-none rounded-[2px] bg-ivory p-3 pb-6 shadow-polaroid transition-shadow duration-300 hover:shadow-paper ${className}`}
     >
-      <img
+      {photo.type === 'video' ? (
+      <video
         src={photo.src}
-        alt={photo.alt}
-        loading="lazy"
-        className="aspect-[4/5] w-full rounded-[1px] object-cover"
+        muted
+        autoPlay
+        loop
+        playsInline
+        preload="metadata"
+        aria-label={photo.alt}
+        className="pointer-events-none aspect-[4/5] w-full rounded-[1px] object-cover"
       />
+      ) : (
+        <img
+          src={photo.src}
+          alt={photo.alt}
+          loading="lazy"
+          className="aspect-[4/5] w-full rounded-[1px] object-cover"
+        />
+      )}
+
       <figcaption className="mt-3 text-center font-hand text-base text-ink/70 sm:text-lg">
         {photo.caption}
       </figcaption>
     </motion.figure>
   );
 }
-
 /* -------------------------------------------------------------------------
  * HandwrittenNote — a small torn-paper note with a personal line, tilted
  * like it was tucked in by hand.
