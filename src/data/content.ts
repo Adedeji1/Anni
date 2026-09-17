@@ -62,7 +62,11 @@ export interface StoryMilestone {
 export const introContent: IntroContent = {
   names: 'Odunayo & Adedeji',
   date: '18 . 09 . 2025',
-  taglineLines: ['one year.', 'somehow NYSC turned into this.', "and I'm not complaining."],
+  taglineLines: [
+  'one year.',
+  'one unexpected beginning.',
+  'one woman I still choose.'
+],
   cta: 'Open',
 };
 
