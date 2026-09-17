@@ -70,8 +70,13 @@ export const loveLetter: LoveLetterContent = {
   salutation: 'My Aadumaadan,',
   paragraphs: [
     "Sometimes I actually stop and think about how strange this whole thing is. One random yes, one year, and somehow you became such a big part of my life that I can’t really remember what it felt like before you were in it.",
+    "And the funny thing is, I don't think I have ever looked at you and thought, 'This is enough'. Somehow, every time I think I have fully understood how much I love you, you give me another reason to realise I was still underestimating it.",
+    "You have been the woman of my dreams from day one and one year later, you're still that woman. Still beautiful, still annoying, still stubborn, still capable of disturbing my peace with absolutely no remorse 😂. Somehow, I am Loving it.",
+    "There is genuinely nothing I want in a woman that you don't have, and the annoying part is that you have some of them in excess. Beauty choke. Imagine money con join this compliment? Soon baby 😂. At this point, I'm just wondering what God was trying to prove to me.",
+    "But beyond all the things I can list, it's you that I love. Your presence. Your way of making ordinary things feel like something. The conversations, the laughter, the little frustrations, the moments where we're both being unreasonable, and even the times we've had to find our way back to each other. I've come to realise that loving you isn't just about the big moments. It's all these little pieces of us that somehow became home.",
+    "So one year later, I don't just look at you and see my girlfriend. I look at you and see the woman I fell for, the woman I have grown with, the woman who has made her way into so many parts of my life, and the woman I still look at and think, 'Yeah… I really, really Love this girl.' 😂❤️ And if this is only year one, I'm genuinely excited to see everything else we become.",
   ],
-  signOff: 'Still stuck with me,',
+  signOff: 'Still here, Still yours😍❤️',
   signature: 'A.',
 };
 
