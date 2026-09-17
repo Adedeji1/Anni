@@ -5,12 +5,12 @@ import IntroExperience from './components/IntroExperience';
 import StorySection from './components/StorySection';
 import MemoryGallery from './components/MemoryGallery';
 import { introContent } from './data/content';
-
+import { DesktopOnly } from './components/DesktopOnly';
 export default function App(): JSX.Element {
   const [hasEntered, setHasEntered] = useState<boolean>(false);
 
   return (
-    <>
+    <DesktopOnly>
       <AnimatePresence>
         {!hasEntered && <IntroExperience key="intro" onEnter={() => setHasEntered(true)} />}
       </AnimatePresence>
@@ -27,6 +27,6 @@ export default function App(): JSX.Element {
         <StorySection />
         <MemoryGallery />
       </PageLayout>
-    </>
+    </DesktopOnly>
   );
 }
